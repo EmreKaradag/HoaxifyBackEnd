@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class UserController {
 
-    @CrossOrigin
     @PostMapping("/api/1.0/users")
     public void createUser(@RequestBody User user){
         log.info(user.toString());
