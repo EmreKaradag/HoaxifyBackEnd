@@ -1,0 +1,35 @@
+2021-02-28 16:27:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PASSWORD VARCHAR(20)": "'$2a$10$5z6i1FrCxzxTO4yX4Sari.yGgQYHAmtvYDoFnFFrfmDvBY52Tg3pW' (60)"; SQL statement:
+insert into user (id, displayname, password, username) values (null, ?, ?, ?) [22001-200]
+2021-02-28 16:27:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PASSWORD VARCHAR(20)": "'$2a$10$9cQizlDp.Qib/chAsMQ8kujekw4I5MWF2d2AVXh1mPIU/jRbHIbpC' (60)"; SQL statement:
+insert into user (id, displayname, password, username) values (null, ?, ?, ?) [22001-200]
+2021-02-28 16:28:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PASSWORD VARCHAR(20)": "'$2a$10$yvf/aArnTThUAAzzya6RTOD8Wn9Hh4se87LOddfYnZfWGjScQmjxa' (60)"; SQL statement:
+insert into user (id, displayname, password, username) values (null, ?, ?, ?) [22001-200]
+2021-02-28 16:29:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PASSWORD VARCHAR(20)": "'$2a$10$JzVQyUfghRPAPPkUsgevAu7PSVoOqh1xe1irFSVJZUNF5ygoRw6gu' (60)"; SQL statement:
+insert into user (id, displayname, password, username) values (null, ?, ?, ?) [22001-200]
+2021-02-28 16:30:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "PASSWORD VARCHAR(20)": "'$2a$10$d2mcuDMatNL7BXXuGtukPe3YyHLeC3ZUSc8JF91v3n9AufpyF7Tu.' (60)"; SQL statement:
+insert into user (id, displayname, password, username) values (null, ?, ?, ?) [22001-200]
+2021-02-28 16:35:12 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "PASSWORD[*]"; expected "PREPARE"; SQL statement:
+PASSWORD [42001-200]
+2021-02-28 16:36:36 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE FROM TABLE[*] USER"; expected "identifier"; SQL statement:
+delete from table user [42001-200]
+2021-02-28 16:40:06 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER
+
+DELETE FROM[*] USER WHERE ID = '3'"; SQL statement:
+select * from user
+
+delete from user where ID = '3' [42000-200]
+2021-02-28 16:40:26 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USER
+
+DELETE FROM[*] USER WHERE ID = 3"; SQL statement:
+select * from user
+
+delete from user where ID = 3 [42000-200]

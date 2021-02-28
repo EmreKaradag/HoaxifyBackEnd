@@ -1,10 +1,10 @@
 package com.hoaxify.wsservice.controller;
 
 import com.hoaxify.wsservice.entity.User;
-import com.hoaxify.wsservice.repository.UserRepository;
+import com.hoaxify.wsservice.service.UserService;
+import com.hoaxify.wsservice.shared.GenericResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class UserController {
     @Autowired
-    UserRepository userRepository;
+    UserService userService;
 
     @PostMapping("/api/1.0/users")
-    public ResponseEntity createUser(@RequestBody User user){
+    public GenericResponse createUser(@RequestBody User user){
         log.info(user.toString());
-        userRepository.save(user);
-        return ResponseEntity.ok(user);
+        userService.save(user);
+        return  new GenericResponse("User Created Success");
     }
 
 }
