@@ -1,11 +1,13 @@
 package com.hoaxify.wsservice.entity;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@Builder
 @Table(name = "USER")
 public class User {
     @Id
