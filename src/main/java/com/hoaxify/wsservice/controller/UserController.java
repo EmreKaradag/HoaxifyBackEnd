@@ -19,6 +19,7 @@ public class UserController {
     public GenericResponse createUser(@RequestBody User user){
         log.info(user.toString());
         userService.save(user);
+        log.info("User Create : {}", user.getDisplayName());
         return  new GenericResponse("User Created Success");
     }
 
